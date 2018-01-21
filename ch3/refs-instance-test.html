@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 라이브러리를 읽어 들입니다. -->
+  <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    // 입력 양식 컴포넌트 입니다.
+    class MyCompo extends React.Component {
+      constructor (props) {
+        super(props)
+        this.state = { value: '' }
+      }
+      render () {
+        this.preInput =
+          <input
+            text='text'
+            ref={(i)=>{ this.realInput = i }}
+            onClick={e => this.doClick(e)} />
+        // 렌더링 내용
+        return (
+          <div>
+            {this.preInput}
+          </div>
+        )
+      }
+      doClick (e) {
+        // 일치하는지 확인
+        console.log(this.preInput)
+        console.log(this.realInput)
+        if (this.preInput === this.realInput) {
+          console.log('같음')
+        } else {
+          console.log('다름')
+        }
+      }
+    }
+    // DOM 내용을 변경
+    ReactDOM.render(<div><MyCompo /></div>, document.getElementById('root'))
+  </script>
+</body>
+
+</html>
