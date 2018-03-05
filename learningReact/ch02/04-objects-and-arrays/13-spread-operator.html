@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+  <meta charset="utf-8">
+  <title>react</title>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <script type="text/babel">
+    var lakes = ["경포호", "화진포", "송지호", "청초호"]
+    var [first, ...rest] = lakes
+
+    console.log(rest.join(', '))
+
+  </script>
+</body>
+
+</html>

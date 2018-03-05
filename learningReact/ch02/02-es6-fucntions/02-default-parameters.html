@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+  <meta charset="utf-8">
+  <title>react</title>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <script type="text/babel">
+
+    var defaultPerson = {
+      name: {
+        first: "원평",
+        last: "최"
+      },
+      favActivity: "게임"
+    }
+
+    function logActivity(p = defaultPerson) {
+      console.log(`${p.name.first}은 ${p.favActivity}를 좋아합니다.`);
+    }
+
+    logActivity()
+  </script>
+</body>
+
+</html>

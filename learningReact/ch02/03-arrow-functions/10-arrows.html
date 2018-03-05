@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+  <meta charset="utf-8">
+  <title>react</title>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <script type="text/babel">
+    var gangwon = {
+      resorts: ["용평","평창","강촌","강릉","홍천"],
+      print: (delay = 1000) => {
+        setTimeout(() => {
+          console.log(this === undefined)
+        }, delay)
+      }
+    }
+    gangwon.print()
+  </script>
+</body>
+
+</html>
