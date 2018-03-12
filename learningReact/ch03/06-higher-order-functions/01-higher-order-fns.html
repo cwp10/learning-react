@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+  <meta charset="utf-8">
+  <title>react</title>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <script type="text/babel">
+
+    const invokeIf = (condition, fnTrue, fnFalse) => 
+      (condition) ? fnTrue() : fnFalse()
+
+    const showWelcome = () =>
+      console.log("Welcome!!!")
+
+    const showUnauthorized = () =>
+      console.log("Unauthorized!!!")
+    
+    invokeIf(true, showWelcome, showUnauthorized)
+    invokeIf(false, showWelcome, showUnauthorized)
+
+  </script>
+</body>
+
+</html>

@@ -10,6 +10,10 @@
 
 <body>
   <script type="text/babel">
+
+    // 스프레드 연산자로 인자를 배열로 바꾸기
+    // 스프레드 연산자로 인자 중 일부를 배열로 받기
+    
     function directions(...args) {
       var [start, ...remaining] = args
       var [finish, ...stops] = remaining.reverse()
