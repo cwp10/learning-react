@@ -1,0 +1,27 @@
+{
+  "name": "recipe-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.15.5",
+    "react": "16.0.0",
+    "react-dom": "16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "webpack": "3.6.0"
+  },
+  "scripts": {
+    "prestart": "./node_modules/.bin/webpack --progress",
+    "start": "./node_modules/.bin/babel-node index-server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
